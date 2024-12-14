@@ -4,7 +4,6 @@
   config:
     gbi: F3DEX2
     sort: OFFSET
-    logging: ERROR
     output:
       code: src/assets
       headers: include/assets

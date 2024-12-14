@@ -1,0 +1,29 @@
+:config:
+  force: true
+  header:
+    code:
+      - '#include "audio.h"'
+
+audio_setup:
+  type: NAUDIO:V1:AUDIO_SETUP
+  audio_seq:
+    size: 0xC40
+    offset: 0x527AF0
+  audio_bank:
+    size: 0x2D90
+    offset: 0x524D60
+  audio_table:
+    size: 0xA3F1D0
+    offset: 0x528730
+
+audio_sample_bank_table:
+  { type: NAUDIO:V1:AUDIO_TABLE, format: SAMPLE, offset: 0x071FF0, symbol: gSampleBankTableData }
+
+audio_seq_table:
+  { type: NAUDIO:V1:AUDIO_TABLE, format: SEQUENCE, offset: 0x071FC0, symbol: gSequenceTableData }
+
+audio_soundfont_table:
+  { type: NAUDIO:V1:AUDIO_TABLE, format: SOUNDFONT, offset: 0x071F80, symbol: gSoundFontTableData }
+
+audio_seq_font_table:
+  { type: ARRAY, count: 283, array_type: u8, offset: 0x071FB0, symbol: gSequenceFontTableData }
